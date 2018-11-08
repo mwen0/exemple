@@ -54,7 +54,11 @@
 
         <!-- Display user.address_id start -->
         <td>
-          <%= user.address.country_id %>
+          <% if user.address.present? %>
+            <a href="/addresses/<%= user.address.id %>">
+              <%= user.address.country_id %>
+            </a>
+          <% end %>
         </td>
         <!-- Display user.address_id end -->
 

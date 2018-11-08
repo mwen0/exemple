@@ -34,7 +34,11 @@
       </dt>
       <!-- Display address_id start -->
       <dd>
-        <%= @user.address_id %>
+        <% if @user.address.present? %>
+          <a href="/addresses/<%= @user.address_id %>">
+            <%= @user.address.country_id %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display address_id end -->
 
