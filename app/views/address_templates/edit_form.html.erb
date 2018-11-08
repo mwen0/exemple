@@ -1,0 +1,32 @@
+<h1>
+  Edit address #<%= @address.id %>
+</h1>
+
+<hr>
+
+<!-- Form address start -->
+<form action="/update_address/<%= @address.id %>" method="post">
+<!-- Form address end -->
+
+  <!-- Label and input for country_id start -->
+  <div class="form-group">
+    <label for="country_id">
+      Country
+    </label>
+
+    <!-- Input for country_id start -->
+    <input type="text" id="country_id" name="country_id" class="form-control" value="<%= @address.country_id %>">
+    <!-- Input for country_id end -->
+  </div>
+  <!-- Label and input for country_id end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Update address
+  </button>
+</form>
+
+<hr>
+
+<a href="/addresses">
+  Go back
+</a>
