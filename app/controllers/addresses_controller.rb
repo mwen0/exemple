@@ -31,6 +31,20 @@ class AddressesController < ApplicationController
     end
   end
 
+  def create_row_from_country
+    @address = Address.new
+
+    @address.country_id = params.fetch("country_id")
+
+    if @address.valid?
+      @address.save
+
+      redirect_to("/countries/#{@address.country_id}", notice: "Address created successfully.")
+    else
+      render("address_templates/new_form_with_errors.html.erb")
+    end
+  end
+
   def edit_form
     @address = Address.find(params.fetch("prefill_with_id"))
 
