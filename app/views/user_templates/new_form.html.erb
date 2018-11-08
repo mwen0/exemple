@@ -5,21 +5,15 @@
 
 <hr>
 
-<!-- Form user start -->
 <form action="/create_user" method="post">
-<!-- Form user end -->
 
-  <!-- Label and input for address_id start -->
   <div class="form-group">
     <label for="address_id">
       Address
     </label>
 
-    <!-- Input for address_id start -->
     <%= select_tag(:address_id, options_from_collection_for_select(Address.all, :id, :country_id, @user.address_id), :class => "form-control") %>
-    <!-- Input for address_id end -->
   </div>
-  <!-- Label and input for address_id end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Create user

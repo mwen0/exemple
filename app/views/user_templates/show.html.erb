@@ -11,28 +11,23 @@
         </a>
       </div>
 
-      <!-- Edit link user start -->
       <div class="col">
         <a href="/users/<%= @user.id %>/edit" class="btn btn-block btn-outline-secondary">
           Edit user
         </a>
       </div>
-      <!-- Edit link user end -->
 
-      <!-- Delete link user start -->
       <div class="col">
         <a href="/delete_user/<%= @user.id %>" class="btn btn-block btn-outline-secondary">
           Delete user
         </a>
       </div>
-      <!-- Delete link user end -->
     </div>
 
     <dl>
       <dt>
         Address
       </dt>
-      <!-- Display address_id start -->
       <dd>
         <% if @user.address.present? %>
           <a href="/addresses/<%= @user.address_id %>">
@@ -40,28 +35,21 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display address_id end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@user.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@user.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
-<!-- Show Page Customization end -->
